@@ -6,7 +6,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import ru.yandex.praktikum.page.MainPage;
 import ru.yandex.praktikum.page.WebDriverFactory;
 import org.openqa.selenium.*;
@@ -16,7 +15,7 @@ import static org.testng.AssertJUnit.assertTrue;
 @RunWith(Parameterized.class)
 
 public class AccordionTest {
-    private WebDriverFactory webDriverFactory = new WebDriverFactory();
+    private static final String BROWSER="chrome";// выбор драйвера
     private WebDriver webDriver;
     private int index;
     private String answer;
@@ -42,7 +41,7 @@ public class AccordionTest {
 
     @Before
     public void setup(){
-        webDriver = new ChromeDriver();
+        webDriver = WebDriverFactory.getWebDriver(BROWSER);
         webDriver.get("https://qa-scooter.praktikum-services.ru/");
     }
     @Test
