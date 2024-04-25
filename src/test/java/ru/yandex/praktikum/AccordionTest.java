@@ -8,7 +8,6 @@ import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import ru.yandex.praktikum.page.MainPage;
 import ru.yandex.praktikum.page.WebDriverFactory;
-import org.openqa.selenium.*;
 
 import static org.testng.AssertJUnit.assertTrue;
 

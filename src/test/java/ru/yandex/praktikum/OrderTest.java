@@ -57,7 +57,7 @@ public class OrderTest {
         rentaPage.rentaInfo("01.01.2025","двое суток");
         rentaPage.clicOrderButton();
         rentaPage.clickYesButton();
-        // Assert.assertTrue(rentaPage.issuedOrderText());// в chrome не появляется окно оформления Заказа
+        Assert.assertTrue(rentaPage.issuedOrderText());// в chrome не появляется окно оформления Заказа
     }
 
     @Test
@@ -74,7 +74,7 @@ public class OrderTest {
         rentaPage.rentaInfo("02.02.2025","трое суток");
         rentaPage.clicOrderButton();
         rentaPage.clickYesButton();
-      //  Assert.assertTrue(rentaPage.issuedOrderText());// в chrome не появляется окно оформления Заказа
+        Assert.assertTrue(rentaPage.issuedOrderText());// в chrome не появляется окно оформления Заказа
     }
 
     @After
